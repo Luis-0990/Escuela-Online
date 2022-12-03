@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FF7474;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uia.dapp1.miembros.view.TablaCarreraViewController">
+   <children>
+      <SplitPane dividerPositions="0.6387959866220736" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="352.0" style="-fx-background-color: #535353;">
+               <children>
+                  <TableView fx:id="tablaCarreras" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #535353;" styleClass="797979" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="inCL" prefWidth="60.0" text="ID" />
+                      <TableColumn fx:id="nombreCL" prefWidth="128.0" text="Carrera" />
+                      <TableColumn fx:id="tiempoCL" prefWidth="103.0" text="Tiempo" />
+                        <TableColumn fx:id="costoCL" prefWidth="86.0" text="Costo" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane style="-fx-background-color: FF7474;">
+               <children>
+                  <Label layoutX="36.0" layoutY="40.0" text="Nombre:">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="100.0" text="Tiempo:">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="170.0" text="Costo:">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTiempo" layoutX="33.0" layoutY="126.0" />
+                  <TextField fx:id="txtCosto" layoutX="33.0" layoutY="189.0" />
+                  <Button fx:id="btnInsertar" layoutX="48.0" layoutY="228.0" mnemonicParsing="false" onAction="#actionInsertar" prefHeight="19.0" prefWidth="132.0" text="Añadir">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" layoutX="48.0" layoutY="289.0" mnemonicParsing="false" onAction="#actionEliminar" prefHeight="19.0" prefWidth="132.0" text="Eliminar">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnModificar" layoutX="48.0" layoutY="258.0" mnemonicParsing="false" onAction="#actionModificar" prefHeight="19.0" prefWidth="132.0" text="Modificar">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancelar" layoutX="18.0" layoutY="363.0" mnemonicParsing="false" onAction="#actionCancelar" prefHeight="12.0" prefWidth="69.0" text="Cancelar" />
+                  <Label layoutX="60.0" layoutY="14.0" text="¡¡Carreras!!" textFill="#c62525">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnActualizar" layoutX="125.0" layoutY="366.0" mnemonicParsing="false" onAction="#actionActualizar" text="Actualizar!!">
+                     <font>
+                        <Font name="System Bold Italic" size="10.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtNombre" layoutX="39.0" layoutY="59.0" prefHeight="29.0" prefWidth="150.0" />
+                  <Label fx:id="idLabel" layoutX="23.0" layoutY="64.0" prefHeight="19.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="4.0" layoutY="64.0" prefHeight="19.0" prefWidth="20.0" text="ID:" />
+                  <Label fx:id="mensajeLabel" layoutX="68.0" layoutY="318.0" prefHeight="23.0" prefWidth="95.0" textFill="#4d00ff">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
